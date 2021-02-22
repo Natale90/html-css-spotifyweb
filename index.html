@@ -7,8 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
 
+    <!-- link to FONTAWSOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
     <!-- link to bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
 
     <!-- link to query stylesheet -->
     <link rel="stylesheet" href="css/query.css">
@@ -26,6 +29,9 @@
   <main class="clearfix">
     <!-- SIDEBAR strats here -->
     <div class="sidebar">
+      <div class="logo">
+        LOGO
+      </div>
       <div class="home">
       <ul>
         <li>
@@ -41,6 +47,7 @@
         </li>
       </ul>
       </div>
+
 
       <div class="playlist">
         <h5>Playlist</h5>
@@ -78,8 +85,13 @@
           </li>
         </ul>
       </div>
-    </div>
-    <!-- SIDEBAR ends here -->
+
+      <div class="install_app">
+
+      </div>
+
+    </div> <!-- SIDEBAR ends here -->
+
 
     <div class="aplication_body">
       <div class="cta_top">
@@ -105,17 +117,34 @@
   </main>
 
   <div class="player">
+
     <div class="console playing_now">
-      album in riproduzione
+      <img src="img/player/sinister.jpeg" alt="">
+
+      <div class="onair">
+        <h5>Sinister</h5>
+        <!-- <span>brano nome</span> -->
+        <p>brano nome</p>
+      </div>
+
+      <i class="far fa-heart"></i>
+      <i class="far fa-folder"></i>
     </div>
 
     <div class="console controller">
-      controller dddddddd
+      <div class="control_station">
+        <i class="fas fa-random"></i>
+        <i class="fas fa-step-backward"></i>
+        <i id="play_button" class="far fa-play-circle"></i>
+        <i class="fas fa-step-forward"></i>
+        <i class="fas fa-redo"></i>
+      </div>
     </div>
 
     <div class="console options">
       more option
     </div>
   </div>
+
   </body>
 </html>

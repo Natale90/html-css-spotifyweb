@@ -1,3 +1,5 @@
+
+/* QUERY FOR THE XS RANGE <768px */
 @media all and (max-width: 768px) {
 
   .sidebar{
@@ -11,7 +13,30 @@
   .cta_top{
     min-width: calc(100% - 50px);
   }
-  .home, .playlist{
+  .home, .playlist, .install_app{
     display: none;
+  }
+}
+
+
+
+
+
+
+
+/* QUERY FOR THE HEIGHT DIRECTION */
+@media all and (max-height: 350px) {
+  .install_app{
+    display:none;
+  }
+}
+
+@media all and (max-height: 70px) {
+  /* .sidebar, .aplication_body{
+    display: none;
+  } */
+
+  .cta_top{
+    margin-left: 200px;
   }
 }

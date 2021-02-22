@@ -8,6 +8,7 @@ body{
   font-size: 16px;
 }
 /* tis set rules the MAINSTRUCTURE behavior */
+
 .clearfix::after{
   content:"";
   display: table;
@@ -15,10 +16,18 @@ body{
 }
 
 /* tis set rules the SIDEBAR behavior */
+.logo{
+  height: 70px;
+  flex-shrink: 1;
+  overflow: hidden;
+}
+
 .sidebar{
   width: 200px;
   height: calc(100vh - 70px);
-  padding: 20px 0 20px 10px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
   /* DEBUG:  */
   background-color: red;
 }
@@ -36,6 +45,25 @@ body{
   margin: 10px 0;
 }
 
+.sidebar .home{
+  /* flex-grow: 1; */
+  flex-shrink: 2;
+  overflow: hidden;
+}
+
+.sidebar .playlist{
+  flex-grow: 1;
+  flex-shrink: 2;
+  overflow: auto;
+}
+
+.install_app{
+  height: 40px;
+  /* DEBUG:  */
+  border:1px solid black;
+}
+
+/* this set rules APPLICATOIN BODY behavior */
 .aplication_body{
   width: calc(100% - 200px);
   height: calc(100vh - 70px);
@@ -50,29 +78,29 @@ body{
 
 .cta_top{
   width: calc(100% - 200px);
-  /* height: 50px; */
-  padding: 30px 20px 30px 0;
+  height: 70px;
+  padding: 0 20px;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
-  text-align: right;
+  /* DEBUG:  */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  float: right;
 }
 
 .cta_top a{
+  display: inline-block;
   color: #fff;
   padding: 10px 25px;
   border:2px solid #fff;
   border-radius: 8px;
 }
 
-
-p{
-  margin:100px 0;
-}
-
 /* this set rules the PLAYER behavior */
 .player{
-  height: 70px;
+  min-height: 70px;
   display: flex;
   justify-content: space-between;
   /* DEBUG:  */
@@ -80,14 +108,45 @@ p{
 }
 
 .console{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
   /* DEBUG:  */
   border:1px solid black;
-  text-align: center;
   flex-basis: auto;
+}
+
+.console h5,
+.console span{
+  margin:0;
+}
+
+.playing_now img{
+  width: 40px;
+  height: auto;
+  margin-right:0.5rem;
+}
+
+.playing_now .onair{
+  display: inline-block;
+}
+
+.playing_now .far{
+  margin:0 6px;
 }
 
 .player .console:nth-child(2){
   flex-grow: 1;
   flex-shrink: 2;
-  /* flex-basis: 20em; */
+  flex-basis: 20em;
+  justify-content: center;
+}
+
+.console.controller .control_station{
+  line-height: 32px;
+}
+
+.console.controller .control_station i{
+  margin: 0 0.6rem;
+  font-size: 1.3rem;
 }
