@@ -1,0 +1,93 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 16px;
+}
+/* tis set rules the MAINSTRUCTURE behavior */
+.clearfix::after{
+  content:"";
+  display: table;
+  clear: both;
+}
+
+/* tis set rules the SIDEBAR behavior */
+.sidebar{
+  width: 200px;
+  height: calc(100vh - 70px);
+  padding: 20px 0 20px 10px;
+  /* DEBUG:  */
+  background-color: red;
+}
+
+.sidebar h5{
+  color: #fff;
+  font-weight: bold;
+}
+
+.sidebar ul{
+  list-style-type: none;
+}
+
+.sidebar ul li{
+  margin: 10px 0;
+}
+
+.aplication_body{
+  width: calc(100% - 200px);
+  height: calc(100vh - 70px);
+  overflow: auto;
+  /* DEBUG:  */
+  background-color: green;
+}
+
+.sidebar, .aplication_body{
+  float: left;
+}
+
+.cta_top{
+  width: calc(100% - 200px);
+  /* height: 50px; */
+  padding: 30px 20px 30px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  text-align: right;
+}
+
+.cta_top a{
+  color: #fff;
+  padding: 10px 25px;
+  border:2px solid #fff;
+  border-radius: 8px;
+}
+
+
+p{
+  margin:100px 0;
+}
+
+/* this set rules the PLAYER behavior */
+.player{
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  /* DEBUG:  */
+  background-color: pink;
+}
+
+.console{
+  /* DEBUG:  */
+  border:1px solid black;
+  text-align: center;
+  flex-basis: auto;
+}
+
+.player .console:nth-child(2){
+  flex-grow: 1;
+  flex-shrink: 2;
+  /* flex-basis: 20em; */
+}
