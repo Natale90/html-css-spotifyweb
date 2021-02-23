@@ -7,6 +7,8 @@
 body{
   font-size: 16px;
 }
+
+
 /* tis set rules the MAINSTRUCTURE behavior */
 
 .clearfix::after{
@@ -16,11 +18,6 @@ body{
 }
 
 /* tis set rules the SIDEBAR behavior */
-.logo{
-  height: 70px;
-  flex-shrink: 1;
-  overflow: hidden;
-}
 
 .sidebar{
   width: 200px;
@@ -28,8 +25,7 @@ body{
   padding: 0 10px;
   display: flex;
   flex-direction: column;
-  /* DEBUG:  */
-  background-color: red;
+  background-color: #2e2e2e;
 }
 
 .sidebar h5{
@@ -45,22 +41,87 @@ body{
   margin: 10px 0;
 }
 
+.sidebar ul li a{
+  text-decoration: none;
+  color:#fff;
+}
+
+.logo{
+  height: 70px;
+  flex-shrink: 1;
+  overflow: hidden;
+  padding-top: 8px;
+}
+
 .sidebar .home{
   /* flex-grow: 1; */
   flex-shrink: 2;
   overflow: hidden;
 }
 
-.sidebar .playlist{
+.home img{
+  max-width: 25px;
+  height: auto;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+
+.sidebar{
   flex-grow: 1;
   flex-shrink: 2;
   overflow: auto;
+  /* DEBUG:  */
+}
+
+.playlist{
+  flex-grow: 1;
+  flex-shrink: 2;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+.playlist h5{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.fa-plus-square {
+  font-size: 2.2rem;
+  margin-right: 5px;
 }
 
 .install_app{
-  height: 40px;
+  color: #fff;
   /* DEBUG:  */
+  flex-shrink: 2;
   border:1px solid black;
+  /* overflow: auto; */
+}
+
+.profile img,
+.profile h5{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.download{
+  border-bottom: 1px solid grey; 
+}
+
+.profile h5{
+  font-size: 1rem;
+}
+
+.install_app #download_pic{
+  max-width: 20px;
+}
+
+.install_app #profile_pic{
+  max-width: 25px;
+  height: auto;
+  border-radius: 50%;
+  background-color: grey;
 }
 
 /* this set rules APPLICATOIN BODY behavior */
@@ -83,11 +144,11 @@ body{
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
+  right: 0;
   /* DEBUG:  */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  float: right;
 }
 
 .cta_top a{
@@ -98,27 +159,35 @@ body{
   border-radius: 8px;
 }
 
+
+
 /* this set rules the PLAYER behavior */
 .player{
   min-height: 70px;
   display: flex;
   justify-content: space-between;
+  color: #fff;
   /* DEBUG:  */
-  background-color: pink;
+  background-color: #2e2e2e;
 }
 
 .console{
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
+  padding: 15px 10px;
   /* DEBUG:  */
-  border:1px solid black;
-  flex-basis: auto;
+  border:1px solid #fff;
+  /* flex-basis: auto; */
+  flex-grow: auto;
 }
 
 .console h5,
 .console span{
   margin:0;
+}
+
+/*.console.playing_now right side of the player */
+.playing_now{
+  display: flex;
+  align-items: center;
 }
 
 .playing_now img{
@@ -135,18 +204,80 @@ body{
   margin:0 6px;
 }
 
+
+/* .console.controller center side of the player */
+
 .player .console:nth-child(2){
   flex-grow: 1;
-  flex-shrink: 2;
-  flex-basis: 20em;
-  justify-content: center;
 }
 
-.console.controller .control_station{
-  line-height: 32px;
+.console i{
+  margin: 10px 15px;
 }
 
-.console.controller .control_station i{
-  margin: 0 0.6rem;
-  font-size: 1.3rem;
+.tasti{
+  text-align: center;
+}
+
+.track_status{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.in_rirpoduzione{
+  display: flex;
+  max-width: 100%;
+}
+
+
+.in_rirpoduzione .avanzamento{
+  width: 50%;
+  height: 4px;
+  float: left;
+  align-self: center;
+  /* background-color: #fff; */
+}
+
+.avanzamento.uno{
+  background-color: grey;
+}
+
+.avanzamento.due{
+  background-color: #fff;;
+}
+
+.time{
+  margin: 0 10px;
+}
+
+
+/* player rightside volume controller */
+.console.options i{
+  margin:0 15px;
+}
+
+.volume_indicator{
+  width: 100px;
+}
+
+.volume_indicator div{
+  height: 4px;
+  float: left;
+}
+
+.volume_indicator div:first-child{
+  width: 40%;
+  background-color: grey;
+}
+
+.volume_indicator div:last-child{
+  width: 60%;
+  background-color: #fff;
+}
+
+.player .console:last-child{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
