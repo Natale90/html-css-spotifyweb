@@ -6,6 +6,7 @@
 
 body{
   font-size: 16px;
+  font-family: "Roboto", "sanserif";
 }
 
 
@@ -18,10 +19,9 @@ body{
 }
 
 /* tis set rules the SIDEBAR behavior */
-
 .sidebar{
   width: 200px;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 86px);
   padding: 0 10px;
   display: flex;
   flex-direction: column;
@@ -73,11 +73,15 @@ body{
   /* DEBUG:  */
 }
 
+.home, .playlist{
+  padding-top: 30px;
+}
+
+
 .playlist{
   flex-grow: 1;
   flex-shrink: 2;
-  overflow: hidden;
-  padding-top: 10px;
+  overflow:auto;
 }
 
 .playlist h5{
@@ -94,8 +98,10 @@ body{
   color: #fff;
   /* DEBUG:  */
   flex-shrink: 2;
-  border:1px solid black;
-  /* overflow: auto; */
+}
+
+.profile{
+  padding-top:5px;
 }
 
 .profile img,
@@ -106,7 +112,8 @@ body{
 }
 
 .download{
-  border-bottom: 1px solid grey; 
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
 }
 
 .profile h5{
@@ -115,6 +122,8 @@ body{
 
 .install_app #download_pic{
   max-width: 20px;
+  vertical-align: middle;
+  margin-right: 15px;
 }
 
 .install_app #profile_pic{
@@ -127,10 +136,11 @@ body{
 /* this set rules APPLICATOIN BODY behavior */
 .aplication_body{
   width: calc(100% - 200px);
-  height: calc(100vh - 70px);
+  height: calc(100vh - 86px);
+  padding: 0 30px;
   overflow: auto;
+  background-color: #070813;
   /* DEBUG:  */
-  background-color: green;
 }
 
 .sidebar, .aplication_body{
@@ -139,7 +149,7 @@ body{
 
 .cta_top{
   width: calc(100% - 200px);
-  height: 70px;
+  height: 86px;
   padding: 0 20px;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -159,11 +169,49 @@ body{
   border-radius: 8px;
 }
 
+/* this set rules the NAV behavior */
+nav{
+  margin-top: 100px;
+  text-align: center;
+}
 
+nav ul li {
+  display:inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+nav ul li a{
+  color: grey;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+li .marker{
+  width: 30px;
+  height: 3px;
+  background-color: #1DB954;
+  position: absolute;
+  bottom:-10%;
+  left:50%;
+  transform: translate(-50%, 0);
+}
+
+/* this set rules the BODY of the webapplication */
+.section_title{
+  font-size: 1.5rem;
+  margin: 30px 0;
+}
+
+.section_title a{
+  color:#fff;
+  text-decoration: none;
+}
 
 /* this set rules the PLAYER behavior */
 .player{
-  min-height: 70px;
+  height: 86px;
   display: flex;
   justify-content: space-between;
   color: #fff;
@@ -208,7 +256,8 @@ body{
 /* .console.controller center side of the player */
 
 .player .console:nth-child(2){
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  flex-basis: 500px;
 }
 
 .console i{
@@ -228,6 +277,7 @@ body{
 .in_rirpoduzione{
   display: flex;
   max-width: 100%;
+  flex-wrap: nowrap;
 }
 
 
