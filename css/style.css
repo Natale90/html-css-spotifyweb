@@ -215,6 +215,12 @@ li .marker{
   margin: 30px 0;
 }
 
+.section_title p{
+  color:grey;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
 
 .section_title a{
   color:#fff;
@@ -223,21 +229,25 @@ li .marker{
 
 .catalogo{
   display: flex;
-  /* justify-content: space-between; */
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 
 .card{
-  /* width: calc(100% / 6 - 20px); */
-  min-width: 180px;
-  margin: 20px 10px;
+  /* width: calc(100% / 6 - 2%); */
+  margin: 20px 1%;
   padding: 10px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
   /* DEBUG:  */
   border: 1px solid red;
+}
+
+section .card:first-of-type{
+  margin-left: 0;
+}
+
+.card:hover{
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .cover{
@@ -253,7 +263,8 @@ li .marker{
   transform: translate(-50%, -50%);
 }
 
-.layover, .fa-play-circle{
+.card .layover,
+.card .fa-play-circle{
   display:none;
 }
 
@@ -285,12 +296,27 @@ li .marker{
 }
 
 .card_details div:first-child{
+  font-size: 0.9rem;
   margin: 10px 0;
 }
 
 .card_details div:last-child{
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
+
+
+/* artisti popolari */
+#artisti_popolari .catalogo .card img{
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
 
 /* this set rules the PLAYER behavior */
 .player{
