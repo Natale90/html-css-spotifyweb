@@ -30,20 +30,23 @@
     <!-- SIDEBAR strats here -->
     <div class="sidebar">
       <div class="logo">
-        <img src="img/logo/logo.svg" alt="">
+        <img id="lg_logo" src="img/logo/logo.svg" alt="">
+        <img id="small_logo" src="img/sidebar/logo-small.svg" alt="">
       </div>
+
+
       <div class="home">
       <ul>
         <li>
-          <a href="#"><img src="img/sidebar/home.svg" alt="home">Home</a>
+           <a href="#"><img src="img/sidebar/home.svg" alt="home"></a> <a href="#">Home</a>
         </li>
 
         <li>
-          <a href="#"><img src="img/sidebar/search.svg" alt="cerca">Cerca</a>
+          <a href="#"><img src="img/sidebar/search.svg" alt="cerca"></a> <a href="#">Cerca</a>
         </li>
 
         <li>
-          <a href="#"><img src="img/sidebar/libreria.svg" alt="libreria">La tua libreria</a>
+          <a href="#"><img src="img/sidebar/libreria.svg" alt="libreria"></a> <a href="#">La tua libreria</a>
         </li>
       </ul>
       </div>
@@ -103,7 +106,7 @@
     <div class="aplication_body">
       <!-- fixed TOP-BAR starts here -->
       <div class="cta_top">
-        <a href="#"> effetua l'apgrade</a>
+        <a id="button_cta" href="#"> effetua l'apgrade</a>
       </div>
       <!-- fixed TOP-BAR ends here -->
 
@@ -310,7 +313,9 @@
         <div class="time">
           5:15
         </div>
-        <div class="avanzamento uno"></div>
+        <div class="avanzamento uno">
+          <div class="song indicator"></div>
+        </div>
         <div class="avanzamento due" ></div>
         <div class="time">
           0:15
@@ -324,9 +329,11 @@
       <i class="fas fa-list"></i>
       <i class="fas fa-desktop"></i>
       <i class="fas fa-volume-up"></i>
-      <div class="volume_indicator clearfix">
-        <div class=""></div>
-        <div class=""></div>
+      <div class="volume_controller clearfix">
+        <div class="volume_up">
+          <div class="volume indicator"></div>
+        </div>
+        <div class="volume_down"></div>
       </div>
     </div>
   </div> <!-- PLAYER ends here -->

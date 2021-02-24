@@ -47,19 +47,23 @@ body{
 }
 
 .logo{
-  height: 70px;
+  min-height: 70px;
   flex-shrink: 1;
   overflow: hidden;
   padding-top: 8px;
 }
 
-.logo img{
+.logo #lg_logo{
   width: 150px;
   height: auto;
 }
 
+#small_logo{
+  margin: 5px 0 0 0;
+}
+
 .sidebar .home{
-  /* flex-grow: 1; */
+  min-height: 135px;
   flex-shrink: 2;
   overflow: hidden;
 }
@@ -78,12 +82,8 @@ body{
   /* DEBUG:  */
 }
 
-.home, .playlist{
-  padding-top: 30px;
-}
-
-
 .playlist{
+  min-height: 150px;
   flex-grow: 1;
   flex-shrink: 2;
   overflow:auto;
@@ -125,6 +125,10 @@ body{
   padding-bottom: 5px;
 }
 
+.download span{
+  margin-left: 15px;
+}
+
 .profile h5{
   font-size: 1rem;
 }
@@ -132,7 +136,6 @@ body{
 .install_app #download_pic{
   max-width: 20px;
   vertical-align: middle;
-  margin-right: 15px;
 }
 
 .install_app #profile_pic{
@@ -171,12 +174,17 @@ body{
   align-items: center;
 }
 
-.cta_top a{
+.cta_top #button_cta{
   display: inline-block;
   color: #fff;
   padding: 10px 25px;
   border:2px solid #fff;
   border-radius: 8px;
+  transition: all .2s ease-in-out;
+}
+
+.cta_top #button_cta:hover{
+  transform: scale(1.1);
 }
 
 /* this set rules the NAV behavior */
@@ -238,8 +246,9 @@ li .marker{
   margin: 20px 1%;
   padding: 10px;
   border-radius: 8px;
+  transition: all .2s ease-in-out;
   /* DEBUG:  */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 section .card:first-of-type{
@@ -264,7 +273,7 @@ section .card:first-of-type{
 }
 
 .card .layover,
-.card .fa-play-circle{
+.cover .fa-play-circle{
   display:none;
 }
 
@@ -291,7 +300,7 @@ section .card:first-of-type{
   text-align: center;
   color:#fff;
   /* DEBUG:  */
-  border:1px solid green;
+  /* border:1px solid green; */
   font-size: 1rem;
 }
 
@@ -309,12 +318,6 @@ section .card:first-of-type{
 #artisti_popolari .catalogo .card img{
   border-radius: 50%;
 }
-
-
-
-
-
-
 
 
 
@@ -367,20 +370,23 @@ section .card:first-of-type{
 .player .console:nth-child(2){
   /* flex-grow: 1; */
   flex-basis: 500px;
+  min-width: 300px;
 }
 
 .console i{
   margin: 10px 15px;
 }
 
-.tasti{
-  text-align: center;
+.console.controller i:nth-of-type(3){
+  transition: all .2s ease-in-out;
 }
 
-.track_status{
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
+.console.controller i:nth-of-type(3):hover{
+  transform: scale(1.5);
+}
+
+.tasti{
+  text-align: center;
 }
 
 .in_rirpoduzione{
@@ -393,17 +399,36 @@ section .card:first-of-type{
 .in_rirpoduzione .avanzamento{
   width: 50%;
   height: 4px;
-  float: left;
   align-self: center;
-  /* background-color: #fff; */
 }
 
 .avanzamento.uno{
   background-color: grey;
+  position: relative;
+}
+
+.avanzamento.uno:hover{
+  background-color: #1DB954;
+}
+
+.indicator{
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: -5%;
+  top:-110%;
+  border-radius: 50%;
+  display: none;
+}
+
+
+.avanzamento.uno:hover .indicator{
+  display: block;
 }
 
 .avanzamento.due{
-  background-color: #fff;;
+  background-color: #fff;
 }
 
 .time{
@@ -416,24 +441,35 @@ section .card:first-of-type{
   margin:0 15px;
 }
 
-.volume_indicator{
+.volume_controller{
   width: 100px;
 }
 
-.volume_indicator div{
+.volume_controller > div{
   height: 4px;
   float: left;
 }
 
-.volume_indicator div:first-child{
+.volume_controller .volume_up{
   width: 40%;
   background-color: grey;
+  position: relative;
 }
 
-.volume_indicator div:last-child{
+.volume_up:hover{
+  background-color: #1DB954;
+}
+
+.volume_up:hover .indicator{
+  display:block;
+}
+
+.volume_controller .volume_down{
   width: 60%;
   background-color: #fff;
 }
+
+
 
 .player .console:last-child{
   display:flex;

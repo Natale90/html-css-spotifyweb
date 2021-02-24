@@ -1,12 +1,53 @@
 /* QUERY FOR THE XS RANGE <768px */
 @media all and (max-width: 767px) {
+  .home, .playlist{
+    padding-top: 0px;
+  }
 
   .card{
     width: calc(100% / 2 - 2%);
+    min-width: 150px;
   }
 
   .sidebar{
     max-width: 50px;
+    padding:5px;
+    text-align: center;
+  }
+
+  .logo{
+    margin: 5px 0;
+  }
+
+  .logo #lg_logo{
+    display:none;
+  }
+
+  .home{
+    flex-grow: 1;
+    padding: 0px;
+  }
+
+  .home ul li a:last-child{
+    display:none;
+  }
+
+
+  .playlist{
+    display: none;
+  }
+
+  .install_app span,
+  .install_app .profile h5 {
+    display:none;
+  }
+
+  #download_pic{
+    margin-right: 0px;
+  }
+
+  #download_pic, #profile_pic{
+    margin: 0;
   }
 
   .aplication_body{
@@ -16,22 +57,40 @@
   .cta_top{
     min-width: calc(100% - 50px);
   }
-  .home, .playlist, .install_app{
+
+}
+
+
+
+/* QUERY FOR THE SM RANGE >767px */
+@media all and (min-width: 768px) and (max-width:991px) {
+  .home, .playlist{
+    padding-top: 30px;
+  }
+
+  .card{
+    width: calc(100% / 2 - 2%);
+  }
+
+  #small_logo{
     display: none;
   }
 }
 
-/* QUERY FOR THE SM RANGE >767px */
-@media all and (min-width: 767px) {
-  .card{
-    width: calc(100% / 2 - 2%);
-  }
-}
+
 
 /* QUERY FOR THE MD RANGE >991px */
 @media all and (min-width: 991px) and (max-width: 1199px) {
+  .home, .playlist{
+    padding-top: 30px;
+  }
+
   .card{
     width: calc(100% / 4 - 2%);
+  }
+
+  #small_logo{
+    display: none;
   }
 }
 
@@ -39,12 +98,20 @@
 
 /* QUERY FOR THE LG RANGE >1199px */
 @media all and (min-width:1199px) {
+  .home, .playlist{
+    padding-top: 30px;
+  }
+
   .card{
     width: calc(100% / 6 - 2%);
   }
 
   #in_evidenza .catalogo{
     justify-content: space-between;
+  }
+
+  #small_logo{
+    display: none;
   }
 }
 
