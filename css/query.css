@@ -1,6 +1,9 @@
-
 /* QUERY FOR THE XS RANGE <768px */
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
+
+  /* .card{
+    width: calc(100% / 2 - 20px);
+  } */
 
   .sidebar{
     max-width: 50px;
@@ -17,6 +20,32 @@
     display: none;
   }
 }
+
+/* QUERY FOR THE SM RANGE >767px */
+@media all and (min-width: 767px) {
+  /* .card{
+    width: calc(100% / 2 - 20px);
+  } */
+}
+
+/* QUERY FOR THE MD RANGE >991px */
+@media all and (min-width: 991px) {
+  /* .card{
+    width: calc(100% / 4 - 20px);
+  } */
+}
+
+
+
+/* QUERY FOR THE LG RANGE >1199px */
+@media and all (min-width:1199px) {
+  /* .card{
+    width: calc(100% / 6 - 20px);
+  } */
+}
+
+
+
 
 
 

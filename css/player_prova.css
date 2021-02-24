@@ -17,6 +17,7 @@
   margin: 300px auto;
   display: flex;
   justify-content: space-between;
+  display: none;
 }
 
 
@@ -60,4 +61,23 @@
 
 .time{
   margin: 0 10px;
+}
+
+
+
+.row{
+  width: 1170px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card{
+  max-width: calc(100% / 6 - 10px);
+}
+
+.card img{
+  /* width: 100%; */
 }

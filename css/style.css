@@ -53,6 +53,11 @@ body{
   padding-top: 8px;
 }
 
+.logo img{
+  width: 150px;
+  height: auto;
+}
+
 .sidebar .home{
   /* flex-grow: 1; */
   flex-shrink: 2;
@@ -87,6 +92,10 @@ body{
 .playlist h5{
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+.playlist li a{
+  font-size: 0.8rem;
 }
 
 .fa-plus-square {
@@ -155,6 +164,7 @@ body{
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 999;
   /* DEBUG:  */
   display: flex;
   justify-content: flex-end;
@@ -211,19 +221,23 @@ li .marker{
   text-decoration: none;
 }
 
-.catalogo .card:first-of-type{
-  margin-left: 0;
+.catalogo{
+  display: flex;
+  /* justify-content: space-between; */
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
+
 .card{
-  width: calc(100% / 6 - 20px);
-  margin: 0 10px;
-  float: left;
+  /* width: calc(100% / 6 - 20px); */
+  min-width: 180px;
+  margin: 20px 10px;
   padding: 10px;
   border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
   /* DEBUG:  */
   border: 1px solid red;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .cover{
