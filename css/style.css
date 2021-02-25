@@ -31,7 +31,7 @@ body{
   padding-top:10px;
   display: flex;
   flex-direction: column;
-  background-color: #2e2e2e;
+  background-color: #070813;
   flex-grow: 1;
   flex-shrink: 2;
   overflow: hidden;
@@ -60,13 +60,9 @@ body{
   color: #fff;
 }
 
-/* .logo, .home, .playlist, .install_app{
-  padding-left: 10px;
-} */
 
 /* Set for the LOGO container in the sidebar */
 .logo{
-  /* min-height: 70px; */
   flex-shrink: 1;
   overflow: hidden;
   padding-top: 8px;
@@ -75,10 +71,6 @@ body{
 .logo #lg_logo{
   width: 150px;
   height: auto;
-}
-
-#small_logo{
-  /* margin: 5px 0 0 0; */
 }
 
 /* set for the HOME container in the sidebar */
@@ -191,7 +183,8 @@ body{
   height: calc(100vh - 86px);
   padding: 0 30px;
   overflow: auto;
-  background-color: #070813;
+  /* background-color: #191414; */
+  background-image: linear-gradient(rgba(0,0,0,.6),#121212);
 }
 
 /* set for the TOP_BAR in the application_body */
@@ -232,6 +225,10 @@ nav ul li {
   display:inline-block;
   margin: 10px 20px;
   position: relative;
+}
+
+nav ul li:first-of-type a{
+  color:#fff;
 }
 
 nav ul li a{
@@ -371,15 +368,12 @@ font-size: 60px;
   display: flex;
   justify-content: space-between;
   color: #fff;
-  /* DEBUG:  */
-  background-color: #2e2e2e;
+  /* background-color: #2c2c2c; */
+  background-color: #181818;
 }
 
 .console{
   padding: 15px 10px;
-  /* DEBUG:  */
-  /* border:1px solid #fff; */
-  /* flex-basis: auto; */
   flex-grow: auto;
 }
 
