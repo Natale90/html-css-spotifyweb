@@ -60,13 +60,13 @@ body{
   color: #fff;
 }
 
-.logo, .home, .playlist, .install_app{
+/* .logo, .home, .playlist, .install_app{
   padding-left: 10px;
-}
+} */
 
 /* Set for the LOGO container in the sidebar */
 .logo{
-  min-height: 70px;
+  /* min-height: 70px; */
   flex-shrink: 1;
   overflow: hidden;
   padding-top: 8px;
@@ -78,7 +78,7 @@ body{
 }
 
 #small_logo{
-  margin: 5px 0 0 0;
+  /* margin: 5px 0 0 0; */
 }
 
 /* set for the HOME container in the sidebar */
@@ -100,8 +100,11 @@ body{
 .home img{
   max-width: 25px;
   height: auto;
-  margin-right: 5px;
   vertical-align: bottom;
+}
+
+.home ul li a:last-of-type{
+  margin-left: 5px;
 }
 
 .home ul li:first-child a:last-of-type{
@@ -135,7 +138,6 @@ body{
 /* set for the INSTAL_APP conteiner in the sidebar */
 .install_app{
   color: #fff;
-  /* DEBUG:  */
   flex-shrink: 2;
 }
 
@@ -155,8 +157,14 @@ body{
   padding-bottom: 5px;
 }
 
-.download span{
+.download a{
+  color:grey;
+  text-decoration: none;
   margin-left: 15px;
+}
+
+.download a:hover{
+  color:#fff;
 }
 
 .profile h5{
@@ -196,7 +204,6 @@ body{
   top: 0;
   right: 0;
   z-index: 999;
-  /* DEBUG:  */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -299,7 +306,7 @@ section .card:first-of-type{
   top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
-
+  transition: all .2s ease-in-out;
 }
 
 .card .layover,
@@ -310,6 +317,10 @@ section .card:first-of-type{
 .cover:hover .layover,
 .cover:hover .fa-play-circle{
   display: block;
+}
+
+.cover .fa-play-circle:hover{
+font-size: 60px;
 }
 
 .card img{
@@ -325,6 +336,7 @@ section .card:first-of-type{
   right:0;
 }
 
+
 #artisti_popolari .catalogo .card .cover .layover{
   border-radius: 50%;
 }
@@ -334,13 +346,12 @@ section .card:first-of-type{
   width: 100%;
   text-align: center;
   color:#fff;
-  /* DEBUG:  */
-  /* border:1px solid green; */
   font-size: 1rem;
 }
 
 .card_details div:first-child{
   font-size: 0.9rem;
+  font-weight: bold;
   margin: 10px 0;
 }
 
@@ -386,11 +397,26 @@ section .card:first-of-type{
 .playing_now img{
   width: 40px;
   height: auto;
-  margin-right:0.5rem;
+  margin-right:8px;
 }
 
 .playing_now .onair{
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.onair span{
+  font-size: 0.7rem;
+  color:grey;
+}
+
+.onair_icons .far{
+  color:grey;
+}
+
+.onair_icons .far:hover{
+  color:#fff;
 }
 
 .playing_now .far{
@@ -428,6 +454,7 @@ section .card:first-of-type{
   display: flex;
   max-width: 100%;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 .in_rirpoduzione .avanzamento{
@@ -439,6 +466,7 @@ section .card:first-of-type{
 .avanzamento.uno{
   background-color: grey;
   position: relative;
+  border-radius: 0 10px 10px 0;
 }
 
 .avanzamento.uno:hover{
@@ -460,7 +488,9 @@ section .card:first-of-type{
   display: block;
 }
 
-.avanzamento.due{
+.song_bar{
+  width: 100%;
+  height: 4px;
   background-color: #fff;
 }
 
@@ -474,16 +504,19 @@ section .card:first-of-type{
   margin:0 15px;
 }
 
-.volume_controller{
+.volume_bar{
   width: 100px;
-}
-
-.volume_controller > div{
   height: 4px;
-  float: left;
+  background-color: #fff;
+  margin-right: 5px;
 }
 
-.volume_controller .volume_up{
+.volume_bar > .volume_up{
+  height: 4px;
+  border-radius: 0 10px 10px 0;
+}
+
+.volume_bar .volume_up{
   width: 40%;
   background-color: grey;
   position: relative;

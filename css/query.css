@@ -1,7 +1,21 @@
-/* QUERY FOR THE XS RANGE <768px */
+/*-------------------- QUERY FOR THE XS RANGE <768px -----------------*/
 @media all and (max-width: 767px) {
+  .sidebar{
+    max-width: 50px;
+    padding:5px;
+    text-align: center;
+  }
+
   .home, .playlist{
     padding-top: 0px;
+  }
+
+  .logo, .home, .playlist, .install_app {
+    padding-left: 0px;
+  }
+
+  .logo{
+    height: 50px;
   }
 
   .card{
@@ -9,15 +23,6 @@
     min-width: 150px;
   }
 
-  .sidebar{
-    max-width: 50px;
-    padding:5px;
-    text-align: center;
-  }
-
-  .logo{
-    margin: 5px 0;
-  }
 
   .logo #lg_logo{
     display:none;
@@ -36,12 +41,12 @@
     display:none;
   }
 
-
   .playlist{
     display: none;
   }
 
-  .install_app span,
+
+  .install_app a,
   .install_app .profile h5 {
     display:none;
   }
@@ -54,6 +59,10 @@
     margin: 0;
   }
 
+  .install_app .download{
+    border-bottom: 1px solid #2e2e2e;
+  }
+
   .aplication_body{
     min-width: calc(100% - 50px);
   }
@@ -62,14 +71,27 @@
     min-width: calc(100% - 50px);
   }
 
+
 }
 
 
 
-/* QUERY FOR THE SM RANGE >767px */
+/*---------------------- QUERY FOR THE SM RANGE >767px --------------------*/
 @media all and (min-width: 768px) and (max-width:991px) {
   .home, .playlist{
     padding-top: 30px;
+  }
+
+  .logo, .home, .playlist, .install_app{
+    padding-left: 10px;
+  }
+
+  .logo{
+    min-height: 70px;
+  }
+
+  .install_app{
+    padding-right: 10px;
   }
 
   .card{
@@ -83,10 +105,22 @@
 
 
 
-/* QUERY FOR THE MD RANGE >991px */
+/*--------------------- QUERY FOR THE MD RANGE >991px -----------------------*/
 @media all and (min-width: 991px) and (max-width: 1199px) {
   .home, .playlist{
     padding-top: 30px;
+  }
+
+  .logo, .home, .playlist, .install_app{
+    padding-left: 10px;
+  }
+
+  .logo{
+    min-height: 70px;
+  }
+
+  .install_app{
+    padding-right: 10px;
   }
 
   .card{
@@ -100,10 +134,22 @@
 
 
 
-/* QUERY FOR THE LG RANGE >1199px */
+/*--------------------------- QUERY FOR THE LG RANGE >1199px -----------------*/
 @media all and (min-width:1199px) {
   .home, .playlist{
     padding-top: 30px;
+  }
+
+  .logo, .home, .playlist, .install_app{
+    padding-left: 10px;
+  }
+
+  .logo{
+    min-height: 70px;
+  }
+
+  .install_app{
+    padding-right: 10px;
   }
 
   .card{
@@ -117,40 +163,4 @@
   #small_logo{
     display: none;
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* QUERY FOR THE HEIGHT DIRECTION */
-@media all and (max-height: 350px) {
-  /* .install_app{
-    display:none;
-  } */
-}
-
-@media all and (max-height: 70px) {
-  /* .sidebar, .aplication_body{
-    display: none;
-  } */
-
 }
