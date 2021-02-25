@@ -28,6 +28,10 @@
     padding: 0px;
   }
 
+  .home ul li .side_marker{
+    display:none;
+  }
+
   .home ul li a:last-child{
     display:none;
   }

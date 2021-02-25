@@ -1,3 +1,5 @@
+
+/*------------------- REGOLE GENERALI WEBAP -------------------------*/
 *{
   margin:0;
   padding:0;
@@ -10,22 +12,29 @@ body{
 }
 
 
-/* tis set rules the MAINSTRUCTURE behavior */
-
+/*----------------- tis set rules the MAINSTRUCTURE behavior -------------*/
 .clearfix::after{
   content:"";
   display: table;
   clear: both;
 }
 
-/* tis set rules the SIDEBAR behavior */
+.sidebar, .aplication_body{
+  float: left;
+}
+
+
+/*---------------------- tis set rules the SIDEBAR behavior ----------------*/
 .sidebar{
   width: 200px;
   height: calc(100vh - 86px);
-  padding: 0 10px;
+  padding-top:10px;
   display: flex;
   flex-direction: column;
   background-color: #2e2e2e;
+  flex-grow: 1;
+  flex-shrink: 2;
+  overflow: hidden;
 }
 
 .sidebar h5{
@@ -39,13 +48,23 @@ body{
 
 .sidebar ul li{
   margin: 10px 0;
+  position: relative;
 }
 
 .sidebar ul li a{
   text-decoration: none;
-  color:#fff;
+  color:grey;
 }
 
+.sidebar ul li a:hover{
+  color: #fff;
+}
+
+.logo, .home, .playlist, .install_app{
+  padding-left: 10px;
+}
+
+/* Set for the LOGO container in the sidebar */
 .logo{
   min-height: 70px;
   flex-shrink: 1;
@@ -62,10 +81,20 @@ body{
   margin: 5px 0 0 0;
 }
 
+/* set for the HOME container in the sidebar */
 .sidebar .home{
   min-height: 135px;
   flex-shrink: 2;
   overflow: hidden;
+}
+
+.side_marker{
+  height: 100%;
+  width: 4px;
+  background-color: #1DB954;
+  position: absolute;
+  left:-5%;
+  top:0;
 }
 
 .home img{
@@ -75,13 +104,12 @@ body{
   vertical-align: bottom;
 }
 
-.sidebar{
-  flex-grow: 1;
-  flex-shrink: 2;
-  overflow: auto;
-  /* DEBUG:  */
+.home ul li:first-child a:last-of-type{
+  color:#fff;
 }
 
+
+/* set for the PLAYLIST container in the sidebar */
 .playlist{
   min-height: 150px;
   flex-grow: 1;
@@ -103,6 +131,8 @@ body{
   margin-right: 5px;
 }
 
+
+/* set for the INSTAL_APP conteiner in the sidebar */
 .install_app{
   color: #fff;
   /* DEBUG:  */
@@ -145,21 +175,19 @@ body{
   background-color: grey;
 }
 
-/* this set rules APPLICATOIN BODY behavior */
+
+
+/*------------------ this set rules APPLICATOIN BODY behavior -----------------*/
 .aplication_body{
   width: calc(100% - 200px);
   height: calc(100vh - 86px);
   padding: 0 30px;
   overflow: auto;
   background-color: #070813;
-  /* DEBUG:  */
 }
 
-.sidebar, .aplication_body{
-  float: left;
-}
-
-.cta_top{
+/* set for the TOP_BAR in the application_body */
+.top_bar{
   width: calc(100% - 200px);
   height: 86px;
   padding: 0 20px;
@@ -174,7 +202,7 @@ body{
   align-items: center;
 }
 
-.cta_top #button_cta{
+.top_bar #button_cta{
   display: inline-block;
   color: #fff;
   padding: 10px 25px;
@@ -183,11 +211,11 @@ body{
   transition: all .2s ease-in-out;
 }
 
-.cta_top #button_cta:hover{
+.top_bar #button_cta:hover{
   transform: scale(1.1);
 }
 
-/* this set rules the NAV behavior */
+/* this set rules the NAV behavior in the aplication_body */
 nav{
   margin-top: 86px;
   text-align: center;
@@ -204,6 +232,10 @@ nav ul li a{
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+nav ul li a:hover{
+  color:#fff;
 }
 
 li .marker{
@@ -240,15 +272,12 @@ li .marker{
   flex-wrap: wrap;
 }
 
-
+/* set for the CARD in the application_body */
 .card{
-  /* width: calc(100% / 6 - 2%); */
   margin: 20px 1%;
   padding: 10px;
   border-radius: 8px;
   transition: all .2s ease-in-out;
-  /* DEBUG:  */
-  /* border: 1px solid red; */
 }
 
 section .card:first-of-type{
@@ -270,6 +299,7 @@ section .card:first-of-type{
   top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
+
 }
 
 .card .layover,
@@ -295,6 +325,11 @@ section .card:first-of-type{
   right:0;
 }
 
+#artisti_popolari .catalogo .card .cover .layover{
+  border-radius: 50%;
+}
+
+
 .card_details{
   width: 100%;
   text-align: center;
@@ -313,15 +348,13 @@ section .card:first-of-type{
   font-size: 0.7rem;
 }
 
-
-/* artisti popolari */
 #artisti_popolari .catalogo .card img{
   border-radius: 50%;
 }
 
 
 
-/* this set rules the PLAYER behavior */
+/*--------------------- this set rules the PLAYER behavior ----------------------*/
 .player{
   height: 86px;
   display: flex;
@@ -334,7 +367,7 @@ section .card:first-of-type{
 .console{
   padding: 15px 10px;
   /* DEBUG:  */
-  border:1px solid #fff;
+  /* border:1px solid #fff; */
   /* flex-basis: auto; */
   flex-grow: auto;
 }
@@ -368,25 +401,27 @@ section .card:first-of-type{
 /* .console.controller center side of the player */
 
 .player .console:nth-child(2){
-  /* flex-grow: 1; */
   flex-basis: 500px;
   min-width: 300px;
 }
 
-.console i{
-  margin: 10px 15px;
+.tasti{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.console.controller i:nth-of-type(3){
+.tasti i{
+  margin: 10px 15px 5px;
   transition: all .2s ease-in-out;
 }
 
-.console.controller i:nth-of-type(3):hover{
-  transform: scale(1.5);
+.console.controller i:nth-of-type(3){
+  font-size: 27px;
 }
 
-.tasti{
-  text-align: center;
+.console.controller i:hover{
+  transform: scale(1.5);
 }
 
 .in_rirpoduzione{
@@ -394,7 +429,6 @@ section .card:first-of-type{
   max-width: 100%;
   flex-wrap: nowrap;
 }
-
 
 .in_rirpoduzione .avanzamento{
   width: 50%;
@@ -421,7 +455,6 @@ section .card:first-of-type{
   border-radius: 50%;
   display: none;
 }
-
 
 .avanzamento.uno:hover .indicator{
   display: block;
@@ -468,8 +501,6 @@ section .card:first-of-type{
   width: 60%;
   background-color: #fff;
 }
-
-
 
 .player .console:last-child{
   display:flex;
