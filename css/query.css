@@ -41,6 +41,10 @@
     display:none;
   }
 
+  .add_playlist{
+    display:none;
+  }
+
   .playlist{
     display: none;
   }
@@ -78,9 +82,6 @@
 
 /*---------------------- QUERY FOR THE SM RANGE >767px --------------------*/
 @media all and (min-width: 768px) and (max-width:991px) {
-  .home, .playlist{
-    padding-top: 30px;
-  }
 
   .logo, .home, .playlist, .install_app{
     padding-left: 10px;
@@ -107,9 +108,6 @@
 
 /*--------------------- QUERY FOR THE MD RANGE >991px -----------------------*/
 @media all and (min-width: 991px) and (max-width: 1199px) {
-  .home, .playlist{
-    padding-top: 30px;
-  }
 
   .logo, .home, .playlist, .install_app{
     padding-left: 10px;
@@ -136,9 +134,6 @@
 
 /*--------------------------- QUERY FOR THE LG RANGE >1199px -----------------*/
 @media all and (min-width:1199px) {
-  .home, .playlist{
-    padding-top: 30px;
-  }
 
   .logo, .home, .playlist, .install_app{
     padding-left: 10px;
