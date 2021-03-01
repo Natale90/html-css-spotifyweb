@@ -1,0 +1,42 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+
+.row{
+  width: 1170px;
+  margin: 200px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+  /*---------------------- istruzioni per una carta detta tassello ------------------*/
+
+
+.tassello{
+  width: calc(100% / 4);
+  transition: all 0.3s ease-in-out;
+}
+
+img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.row .tassello:not(:first-child){
+  margin-left: -150px;
+}
+
+.tassello:hover + .tassello{
+  margin-left: -50px;
+}
+
+.tassello:hover{
+  transform: translateY(-1rem) rotate(3deg);
+  margin-right: 5px;
+}
