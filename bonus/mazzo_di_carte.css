@@ -19,7 +19,7 @@
 
 
 .tassello{
-  width: calc(100% / 4);
+  width: calc(100% / 3);
   transition: all 0.3s ease-in-out;
 }
 
@@ -29,14 +29,18 @@ img{
 }
 
 .row .tassello:not(:first-child){
-  margin-left: -150px;
+  margin-left: -250px;
 }
 
-.tassello:hover + .tassello{
-  margin-left: -50px;
+.tassello:hover ~ .tassello{
+  transform: translatex(100px);
 }
 
 .tassello:hover{
   transform: translateY(-1rem) rotate(3deg);
-  margin-right: 5px;
+}
+
+
+.tassello_basso{
+  background-color: #fff;
 }
